@@ -7,7 +7,7 @@ import (
 )
 
 type Board struct {
-	grid [10][10]int
+	grid [10][10]BoardField
 }
 
 func NewBoard() *Board {
@@ -15,11 +15,6 @@ func NewBoard() *Board {
 }
 
 func (b *Board) InitializeBoardFields() {
-	for i := range b.grid {
-		for j := range b.grid[i] {
-			b.grid[i][j] = 0
-		}
-	}
 
 }
 
@@ -29,7 +24,7 @@ func (b *Board) RenderBoard() {
 
 	t.AppendHeader(table.Row{"", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"})
 	for i, arr := range b.grid {
-		t.AppendRow([]interface{}{i + 1, arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]})
+		t.AppendRow([]interface{}{i + 1, arr[0].fieldChar, arr[1].fieldChar, arr[2].fieldChar, arr[3].fieldChar, arr[4].fieldChar, arr[5].fieldChar, arr[6].fieldChar, arr[7].fieldChar, arr[8].fieldChar, arr[9].fieldChar})
 
 	}
 
