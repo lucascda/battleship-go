@@ -10,3 +10,7 @@ type BoardField struct {
 func NewBoardField() *BoardField {
 	return &BoardField{isWater: true, isShip: false, isHit: false, fieldChar: ""}
 }
+
+func (b *BoardField) ChangeFieldChar(value string) {
+	b.fieldChar = value
+}

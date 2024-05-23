@@ -7,7 +7,7 @@ import (
 )
 
 type Board struct {
-	grid [10][10]BoardField
+	Grid [10][10]BoardField
 }
 
 func NewBoard() *Board {
@@ -23,7 +23,7 @@ func (b *Board) RenderBoard() {
 	t.SetOutputMirror(os.Stdout)
 
 	t.AppendHeader(table.Row{"", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"})
-	for i, arr := range b.grid {
+	for i, arr := range b.Grid {
 		t.AppendRow([]interface{}{i + 1, arr[0].fieldChar, arr[1].fieldChar, arr[2].fieldChar, arr[3].fieldChar, arr[4].fieldChar, arr[5].fieldChar, arr[6].fieldChar, arr[7].fieldChar, arr[8].fieldChar, arr[9].fieldChar})
 
 	}
