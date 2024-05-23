@@ -14,3 +14,15 @@ func NewBoardField() *BoardField {
 func (b *BoardField) ChangeFieldChar(value string) {
 	b.fieldChar = value
 }
+
+func (b *BoardField) ToggleisWater() {
+	b.isWater = !b.isWater
+}
+
+func (b *BoardField) ToggleisShip() {
+	b.isShip = !b.isShip
+}
+
+func (b *BoardField) ToggleisHit() {
+	b.isHit = !b.isHit
+}
